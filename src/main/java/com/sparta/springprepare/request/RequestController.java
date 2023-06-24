@@ -1,6 +1,7 @@
 package com.sparta.springprepare.request;
 
 import com.sparta.springprepare.response.Star;
+import com.sparta.springprepare.response.Star2;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,7 +26,8 @@ public class RequestController {
     // GET http://localhost:8080/hello/request/form/param?name=Robbie&age=95
     @GetMapping("/form/param")
     @ResponseBody
-    public String helloGetRequestParam(@RequestParam String name, @RequestParam(required = false)  Integer age) {
+    public String helloGetRequestParam(@RequestParam String name, @RequestParam(required = false)  int age) {
+        System.out.printf(name);
         return String.format("Hello, @RequestParam.<br> name = %s, age = %d", name, age);
     }
 
@@ -37,7 +39,8 @@ public class RequestController {
     //  name=Robbie&age=95
     @PostMapping("/form/param")
     @ResponseBody
-    public String helloPostRequestParam(@RequestParam String name, @RequestParam int age) {
+    public String helloPostRequestParam(@RequestParam String name, @RequestParam int age, @PathVariable String test) {
+        System.out.println("test : " + test);
         return String.format("Hello, @RequestParam.<br> name = %s, age = %d", name, age);
     }
 
@@ -57,7 +60,8 @@ public class RequestController {
     // GET http://localhost:8080/hello/request/form/param/model?name=Robbie&age=95
     @GetMapping("/form/param/model")
     @ResponseBody
-    public String helloRequestParam(@ModelAttribute Star star) {
+    public String helloRequestParam(@ModelAttribute Star2 star) {
+        System.out.println(star.age);
         return String.format("Hello, @ModelAttribute.<br> (name = %s, age = %d) ", star.name, star.age);
     }
 
@@ -69,7 +73,8 @@ public class RequestController {
     //  {"name":"Robbie","age":"95"}
     @PostMapping("/form/json")
     @ResponseBody
-    public String helloPostRequestJson(@RequestBody Star star) {
+    public String helloPostRequestJson(@RequestBody Star2 star) {
+        System.out.printf(star.name);
         return String.format("Hello, @RequestBody.<br> (name = %s, age = %d) ", star.name, star.age);
     }
 }
