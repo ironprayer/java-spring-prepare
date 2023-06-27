@@ -4,6 +4,7 @@ import com.sparta.springprepare.dto.MemoRequestDto;
 import com.sparta.springprepare.dto.MemoResponseDto;
 import com.sparta.springprepare.entity.Memo;
 import com.sparta.springprepare.repository.MemoRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -29,29 +30,33 @@ public class MemoService {
     }
 
     public List<MemoResponseDto> getMemos() {
-        return memoRepository.findAll();
+
+        return memoRepository.findAll().stream().map(MemoResponseDto::new).toList();
+
     }
 
+    @Transactional
     public Long updateMemo(Long id, MemoRequestDto requestDto) {
 
-        Memo memo = memoRepository.findById(id);
-        if(memo != null) {
-            memoRepository.update(id, requestDto);
-            return id;
-        } else {
-            throw new IllegalArgumentException("선택한 메모는 존재하지 않습니다.");
-        }
+        Memo memo = findMemo(id);
+
+        memo.update(requestDto);
+        return id;
     }
 
     public Long deleteMemo(Long id) {
 
-        Memo memo = memoRepository.findById(id);
+        Memo memo = findMemo(id);
 
-        if(memo != null) {
-            memoRepository.delete(id);
-            return id;
-        } else {
-            throw new IllegalArgumentException("선택한 메모는 존재하지 않습니다.");
-        }
+        memoRepository.delete(memo);
+
+        return id;
+
+    }
+
+    private Memo findMemo(Long id) {
+        return memoRepository.findById(id).orElseThrow(() ->
+                new IllegalArgumentException("선택한 메모는 존재하지 않습니다.")
+        );
     }
 }
