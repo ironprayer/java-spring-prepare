@@ -15,7 +15,7 @@ public class BeanTest {
     Food food;
 
     @Test
-    @DisplayName("Primary와 Qualifier 우선순위 확인")
+    @DisplayName("Primary와 Qualifier 우선순위 확면")
     void test1(){
         food.eat();
     }
