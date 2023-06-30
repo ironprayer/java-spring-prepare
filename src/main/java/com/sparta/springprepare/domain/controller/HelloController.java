@@ -1,4 +1,4 @@
-package com.sparta.springprepare.controller;
+package com.sparta.springprepare.domain.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

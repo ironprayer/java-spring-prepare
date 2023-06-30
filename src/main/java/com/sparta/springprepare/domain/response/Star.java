@@ -1,4 +1,4 @@
-package com.sparta.springprepare.response;
+package com.sparta.springprepare.domain.response;
 
 import lombok.Setter;
 

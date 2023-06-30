@@ -1,8 +1,8 @@
-package com.sparta.springprepare.controller;
+package com.sparta.springprepare.domain.controller;
 
-import com.sparta.springprepare.dto.MemoRequestDto;
-import com.sparta.springprepare.dto.MemoResponseDto;
-import com.sparta.springprepare.service.MemoService;
+import com.sparta.springprepare.domain.dto.MemoRequestDto;
+import com.sparta.springprepare.domain.dto.MemoResponseDto;
+import com.sparta.springprepare.domain.service.MemoService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

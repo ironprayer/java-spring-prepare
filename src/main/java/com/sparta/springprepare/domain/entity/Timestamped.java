@@ -1,4 +1,4 @@
-package com.sparta.springprepare.entity;
+package com.sparta.springprepare.domain.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

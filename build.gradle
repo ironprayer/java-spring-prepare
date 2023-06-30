@@ -27,6 +27,9 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
+    // Security
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
     // MySQL
     implementation 'mysql:mysql-connector-java:8.0.28'
 

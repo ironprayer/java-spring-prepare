@@ -1,7 +1,7 @@
 package com.sparta.springprepare;
 
-import com.sparta.springprepare.entity.Memo;
-import com.sparta.springprepare.repository.MemoRepository;
+import com.sparta.springprepare.domain.entity.Memo;
+import com.sparta.springprepare.domain.repository.MemoRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.junit.jupiter.api.Disabled;

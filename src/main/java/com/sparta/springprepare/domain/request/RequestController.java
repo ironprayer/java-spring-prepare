@@ -1,7 +1,7 @@
-package com.sparta.springprepare.request;
+package com.sparta.springprepare.domain.request;
 
-import com.sparta.springprepare.response.Star;
-import com.sparta.springprepare.response.Star2;
+import com.sparta.springprepare.domain.response.Star;
+import com.sparta.springprepare.domain.response.Star2;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 

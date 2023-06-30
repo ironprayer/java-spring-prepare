@@ -1,4 +1,4 @@
-package com.sparta.springprepare.dto;
+package com.sparta.springprepare.domain.dto;
 
 import lombok.Getter;
 

@@ -1,6 +1,6 @@
-package com.sparta.springprepare.entity;
+package com.sparta.springprepare.domain.entity;
 
-import com.sparta.springprepare.dto.MemoRequestDto;
+import com.sparta.springprepare.domain.dto.MemoRequestDto;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
