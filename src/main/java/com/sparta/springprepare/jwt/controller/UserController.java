@@ -1,7 +1,9 @@
 package com.sparta.springprepare.jwt.controller;
 
+import com.sparta.springprepare.jwt.dto.LoginRequestDto;
 import com.sparta.springprepare.jwt.dto.SignupRequestDto;
 import com.sparta.springprepare.jwt.service.UserService;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,6 +29,13 @@ public class UserController {
     @PostMapping("/user/signup")
     public String signup(SignupRequestDto requestDto){
         userService.signup(requestDto);
-        return "";
+        return "redirect:/home";
+    }
+
+    @PostMapping("/user/login")
+    public String login(LoginRequestDto requestDto, HttpServletResponse httpServletResponse){
+        userService.login(requestDto,httpServletResponse);
+
+        return "redirect:/";
     }
 }
