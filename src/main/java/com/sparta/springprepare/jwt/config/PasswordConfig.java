@@ -1,4 +1,4 @@
-package com.sparta.springprepare.config;
+package com.sparta.springprepare.jwt.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

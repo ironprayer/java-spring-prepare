@@ -1,6 +1,6 @@
-package com.sparta.springprepare.jwt;
+package com.sparta.springprepare.jwt.jwt;
 
-import com.sparta.springprepare.entity.UserRoleEnum;
+import com.sparta.springprepare.jwt.entity.UserRoleEnum;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import jakarta.annotation.PostConstruct;

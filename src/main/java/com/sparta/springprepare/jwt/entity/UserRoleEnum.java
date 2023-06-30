@@ -1,4 +1,4 @@
-package com.sparta.springprepare.entity;
+package com.sparta.springprepare.jwt.entity;
 
 public enum UserRoleEnum {
     USER(Authority.USER),  // 사용자 권한
