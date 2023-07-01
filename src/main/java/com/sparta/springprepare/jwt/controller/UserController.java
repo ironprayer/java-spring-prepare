@@ -29,7 +29,7 @@ public class UserController {
     @PostMapping("/user/signup")
     public String signup(SignupRequestDto requestDto){
         userService.signup(requestDto);
-        return "redirect:/home";
+        return "redirect:/api/login";
     }
 
     @PostMapping("/user/login")

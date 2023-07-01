@@ -14,6 +14,9 @@ public class BeanTest {
     @Qualifier("chicken")
     Food food;
 
+    @Autowired
+    Food chicken;
+
     @Test
     @DisplayName("Primary와 Qualifier 우선순위 확면")
     void test1(){
