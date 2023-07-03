@@ -1,4 +1,4 @@
-package com.sparta.springprepare.domain.response;
+package com.sparta.springprepare.memo.domain.response;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

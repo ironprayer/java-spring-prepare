@@ -2,7 +2,7 @@ package com.sparta.springprepare;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sparta.springprepare.domain.response.Star;
+import com.sparta.springprepare.memo.domain.response.Star;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

@@ -1,9 +1,9 @@
-package com.sparta.springprepare.domain.service;
+package com.sparta.springprepare.memo.domain.service;
 
-import com.sparta.springprepare.domain.dto.MemoRequestDto;
-import com.sparta.springprepare.domain.dto.MemoResponseDto;
-import com.sparta.springprepare.domain.entity.Memo;
-import com.sparta.springprepare.domain.repository.MemoRepository;
+import com.sparta.springprepare.memo.domain.dto.MemoRequestDto;
+import com.sparta.springprepare.memo.domain.dto.MemoResponseDto;
+import com.sparta.springprepare.memo.domain.entity.Memo;
+import com.sparta.springprepare.memo.domain.repository.MemoRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 

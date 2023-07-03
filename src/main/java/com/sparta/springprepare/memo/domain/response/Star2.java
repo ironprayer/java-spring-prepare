@@ -1,4 +1,4 @@
-package com.sparta.springprepare.domain.response;
+package com.sparta.springprepare.memo.domain.response;
 
 //@Getter
 public class Star2 {

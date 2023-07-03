@@ -1,4 +1,4 @@
-package com.sparta.springprepare.domain.html;
+package com.sparta.springprepare.memo.domain.html;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

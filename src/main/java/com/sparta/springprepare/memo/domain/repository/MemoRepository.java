@@ -1,6 +1,6 @@
-package com.sparta.springprepare.domain.repository;
+package com.sparta.springprepare.memo.domain.repository;
 
-import com.sparta.springprepare.domain.entity.Memo;
+import com.sparta.springprepare.memo.domain.entity.Memo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
