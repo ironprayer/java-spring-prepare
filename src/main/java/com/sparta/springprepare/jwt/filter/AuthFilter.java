@@ -1,7 +1,7 @@
 package com.sparta.springprepare.jwt.filter;
 
 import com.sparta.springprepare.jwt.jwt.JwtUtil;
-import com.sparta.springprepare.jwt.repository.UserRepository;
+import com.sparta.springprepare.jwt.repository.UsersRepository;
 import jakarta.servlet.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.annotation.Order;
@@ -14,10 +14,10 @@ import java.io.IOException;
 @Order(2)
 public class AuthFilter implements Filter {
 
-    private final UserRepository userRepository;
+    private final UsersRepository userRepository;
     private final JwtUtil jwtUtil;
 
-    public AuthFilter(UserRepository userRepository, JwtUtil jwtUtil) {
+    public AuthFilter(UsersRepository userRepository, JwtUtil jwtUtil) {
         this.userRepository = userRepository;
         this.jwtUtil = jwtUtil;
     }
