@@ -10,7 +10,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-@Table(name = "users")
+@Table(name = "user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,5 +18,5 @@ public class User {
     private String name;
 
     @OneToMany(mappedBy = "user")
-    private List<Order> orderList = new ArrayList<>();
+    private List<Food> foodList = new ArrayList<>();
 }

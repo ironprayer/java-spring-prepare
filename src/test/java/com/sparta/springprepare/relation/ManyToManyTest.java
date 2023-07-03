@@ -198,7 +198,7 @@ public class ManyToManyTest {
         User user = userRepository.findById(1L).orElseThrow(NullPointerException::new);
         // 고객 정보 조회
         System.out.println("user.getName() = " + user.getName());
-
+        
         // 해당 고객이 주문한 음식 정보 조회
 //        List<Food> foodList = user.getFoodList();
 //        for (Food food : foodList) {
